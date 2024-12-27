@@ -17,16 +17,16 @@ struct ContentView: View {
                 
                 TabView(selection: $selectedTab){
                     
-                    Text("Dashboard")
+                    DashboardView()
                         .tag(0)
                     
-                    Text("Perfomance")
+                    PerformanceView()
                         .tag(1)
                     
-                    Text("Profile")
+                    ProfileView()
                         .tag(2)
                     
-                    Text("Notifications")
+                    NotificationsView()
                         .tag(3)
                     
                     
@@ -38,7 +38,7 @@ struct ContentView: View {
             }
             
             .toolbar(showMenu ? .hidden : .visible, for: .navigationBar)
-            .navigationBarTitle("Home", displayMode: .inline)
+            .navigationBarTitle("Side Menu", displayMode: .inline)
             .toolbar{
                 ToolbarItem(placement: .topBarLeading){
                     Button(action: {
